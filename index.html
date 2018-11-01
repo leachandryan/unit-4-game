@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Crystals Collector Game</title>
+</head>
+<body>
+    <!-- div "container" contains all content to include heading, mainly used for changing background and to adjust 
+        content to differeent screen sizes. -->
+    <div id="container">
+        
+
+        <h2 id="header">Crystals Collector!</h2>
+            <br>
+            <br>
+        <div id="gamerules">
+                <p>You will be given a random number at the start of the game</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your your total score to the random number generated. You lose the game if your total score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the vaules of each crystal.</p>
+        </div>
+        <div>
+            <!--h1 "computernumber" is sourced in the unit-4-game.js file and will be responsible for providing a 
+                randomly generated number that a user must equal to generate a win-->
+            <h1 id="computernumber">38</h1>
+        </div>
+            <!--div "scoreboard" is used for CSS styling-->
+        <div id="scoreboard">
+            <!--p "totalwin" is sourced in unit-4-game to display total number of user wins-->
+            <h4>Total Wins:</h4>
+                <p id="totalwin">1</p>
+                <!--p "totaloss" is sourced in unit-4-game to display total number of computer wins-->
+            <h4>Total Losses:</h4>
+                <p id="totalloss">1</p>
+        </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        <!--div "familyjewels" is scourced in CSS primarly to provide a container for the floated jewel IDs-->
+        <div id="familyjewels">
+            <!--Each jewel id is sourced in CSS as well as unit-4-game.js, each jewel is id seperatly to aid in JS processes-->
+            <p id="jewel1"><img src="https://cdn.leibish.com/media/gemstones/thumb_1280/gemstone-143303-ruby-oval-red-62043.jpg" width=100% alt="Ruby">
+            </p>
+            <p id="jewel2"><img src="https://5.imimg.com/data5/JD/KY/MY-10793862/emerald-natural-gemstone-500x500.jpg" width=100% alt="Emerald">
+            </p>
+            <p id="jewel3"><img src="https://df2sm3urulav.cloudfront.net/tenants/gr/uploads/images/660000-664999/662189/590ff5ad6cdac.jpg" width=100% alt="Ruby">
+            </p>
+            <p id="jewel4"><img src="http://www.planetarygems.com/images2/yellow%20TOP%20lemon%200.92%20cts.%20OVflower%20SL13lot.jpg" width=100% alt="Ruby">
+            </p>
+        </div>
+        <!--div "playerboard is used for css styling and contains playercounter.-->
+        <div id="playerboard">
+            <h3>Current Total Points</h3>
+            <!--p "playercounter is sourced in unit-4-game.js and is used to keep total player points-->
+            <p id="playercounter">245
+            </p>
+
+        </div>
+        <br>
+        <br>
+    </div>
+        
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script src="game.js">
+    </script>
+<style>
+    #header{
+        color: whitesmoke;
+        padding: 20px;
+        text-align: center;
+        font-size: 40px;
+    }
+    #container{
+        margin: none;
+        background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/05/Art-Images-Wallpaper-HD-Background.jpg");
+    }
+    #gamerules{
+        background-color: lightseagreen;
+        margin-left: 15px;
+        width: 50%;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    #computernumber{
+        background-color: green;
+        margin-left: 15px;
+        width: 15%;
+        padding: 15px;
+        float: left;
+        text-align: center;
+    }
+    #scoreboard{
+        background-color: lightseagreen;
+        width: 15%;
+        padding: 5px;
+        margin-left: 15%;
+        float:left;
+    }
+    #familyjewels{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #jewel1{
+        margin-left: 15px;
+        width:15%;
+        float: left;
+    }
+    #jewel2{
+        margin-left: 15px;
+        width:15%;
+        float: left;
+    }
+    #jewel3{
+        margin-left: 15px;
+        width:15%;
+        float: left;
+    }
+    #jewel4{
+        margin-left: 15px;
+        width:15%;
+        float: left;
+    }
+    #playerboard{
+        background-color: lightseagreen;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        padding: 20px;
+        width: 35%;
+        text-align: center;
+    }
+        
+</style>
+
+</body>
+</html>
