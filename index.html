@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <title>Crystals Collector Game</title>
 </head>
@@ -22,10 +23,11 @@
                 <p>The value of each crystal is hidden from you until you click on it.</p>
                 <p>Each time when the game starts, the game will change the vaules of each crystal.</p>
         </div>
-        <div>
-            <!--h1 "computernumber" is sourced in the unit-4-game.js file and will be responsible for providing a 
+        <div id="computerboard">
+            <!--p "computernumber" is sourced in the unit-4-game.js file and will be responsible for providing a 
                 randomly generated number that a user must equal to generate a win-->
-            <h1 id="computernumber">38</h1>
+            <h5 >Add your gems up to this number to win!</h5>
+                <p id="computernumber">32</p>
         </div>
             <!--div "scoreboard" is used for CSS styling-->
         <div id="scoreboard">
@@ -43,13 +45,13 @@
         <!--div "familyjewels" is scourced in CSS primarly to provide a container for the floated jewel IDs-->
         <div id="familyjewels">
             <!--Each jewel id is sourced in CSS as well as unit-4-game.js, each jewel is id seperatly to aid in JS processes-->
-            <p id="jewel1"><img src="https://cdn.leibish.com/media/gemstones/thumb_1280/gemstone-143303-ruby-oval-red-62043.jpg" width=100% alt="Ruby">
+            <p id="jewel1" class="btn btn-primary btn-lg"><img src="https://cdn.leibish.com/media/gemstones/thumb_1280/gemstone-143303-ruby-oval-red-62043.jpg" width=100% alt="Ruby">
             </p>
-            <p id="jewel2"><img src="https://5.imimg.com/data5/JD/KY/MY-10793862/emerald-natural-gemstone-500x500.jpg" width=100% alt="Emerald">
+            <p id="jewel2" class="btn btn-primary btn-lg"><img src="https://5.imimg.com/data5/JD/KY/MY-10793862/emerald-natural-gemstone-500x500.jpg" width=100% alt="Emerald">
             </p>
-            <p id="jewel3"><img src="https://df2sm3urulav.cloudfront.net/tenants/gr/uploads/images/660000-664999/662189/590ff5ad6cdac.jpg" width=100% alt="Ruby">
+            <p id="jewel3"class="btn btn-primary btn-lg"><img src="https://df2sm3urulav.cloudfront.net/tenants/gr/uploads/images/660000-664999/662189/590ff5ad6cdac.jpg" width=100% alt="Ruby">
             </p>
-            <p id="jewel4"><img src="http://www.planetarygems.com/images2/yellow%20TOP%20lemon%200.92%20cts.%20OVflower%20SL13lot.jpg" width=100% alt="Ruby">
+            <p id="jewel4" class="btn btn-primary btn-lg"><img src="http://www.planetarygems.com/images2/yellow%20TOP%20lemon%200.92%20cts.%20OVflower%20SL13lot.jpg" width=100% alt="Ruby">
             </p>
         </div>
         <!--div "playerboard is used for css styling and contains playercounter.-->
@@ -63,12 +65,54 @@
         <br>
         <br>
     </div>
+
+
+
+
+
+
         
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
 
-    <script src="game.js">
+    <script>
+
+        var wincounter = 0;
+        var playercounter = 0;
+        var losscounter = 0;
+
+         var computerchoice = Math.floor((Math.random() * 101) + 20);
+         console.log(computerchoice)
+         document.getElementById("computernumber").innerHTML = computerchoice;
+
+         var jewelnumber1 = Math.floor((Math.random() * 11) + 1);
+         console.log(jewelnumber1)
+
+         var jewelnumber2 = Math.floor((Math.random() * 11) + 1);
+         console.log(jewelnumber2)
+
+         var jewelnumber3 = Math.floor((Math.random() * 11) + 1);
+         console.log(jewelnumber3)
+
+         var jewelnumber4 = Math.floor((Math.random() * 11) + 1);
+         console.log(jewelnumber4)
+
+        $("jewel1").on("click", function(event) {
+            console.log(jewelnumber1);
+        });
+    
+
+     
+
     </script>
+
+
+
+
+
+
+
+
 <style>
     #header{
         color: whitesmoke;
@@ -78,6 +122,7 @@
     }
     #container{
         margin: none;
+        width: auto;
         background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/05/Art-Images-Wallpaper-HD-Background.jpg");
     }
     #gamerules{
@@ -87,13 +132,15 @@
         padding: 5px;
         margin-bottom: 15px;
     }
-    #computernumber{
-        background-color: green;
+    #computerboard{
+        background-color:lightseagreen;
+        color: green;
         margin-left: 15px;
         width: 15%;
         padding: 15px;
         float: left;
         text-align: center;
+        font-weight: bold;
     }
     #scoreboard{
         background-color: lightseagreen;
@@ -101,6 +148,7 @@
         padding: 5px;
         margin-left: 15%;
         float:left;
+        text-align: center;
     }
     #familyjewels{
         content: "";
@@ -109,21 +157,25 @@
     }
     #jewel1{
         margin-left: 15px;
+        margin-top: 10px;
         width:15%;
         float: left;
     }
     #jewel2{
         margin-left: 15px;
+        margin-top: 10px;
         width:15%;
         float: left;
     }
     #jewel3{
         margin-left: 15px;
+        margin-top: 10px;
         width:15%;
         float: left;
     }
     #jewel4{
         margin-left: 15px;
+        margin-top: 10px;
         width:15%;
         float: left;
     }
