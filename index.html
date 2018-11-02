@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="unit-4-game.css">
 
     <title>Crystals Collector Game</title>
+
 </head>
 <body>
     <!-- div "container" contains all content to include heading, mainly used for changing background and to adjust 
@@ -27,16 +30,16 @@
             <!--p "computernumber" is sourced in the unit-4-game.js file and will be responsible for providing a 
                 randomly generated number that a user must equal to generate a win-->
             <h5 >Add your gems up to this number to win!</h5>
-                <p id="computernumber">32</p>
+                <p id="computernumber">Calculating</p>
         </div>
             <!--div "scoreboard" is used for CSS styling-->
         <div id="scoreboard">
             <!--p "totalwin" is sourced in unit-4-game to display total number of user wins-->
             <h4>Total Wins:</h4>
-                <p id="totalwin">1</p>
+                <p id="totalwin">0</p>
                 <!--p "totaloss" is sourced in unit-4-game to display total number of computer wins-->
             <h4>Total Losses:</h4>
-                <p id="totalloss">1</p>
+                <p id="totalloss">0</p>
         </div>
             <br>
             <br>
@@ -58,7 +61,7 @@
         <div id="playerboard">
             <h3>Current Total Points</h3>
             <!--p "playercounter is sourced in unit-4-game.js and is used to keep total player points-->
-            <p id="playercounter">245
+            <p id="playercounter">0
             </p>
 
         </div>
@@ -66,129 +69,10 @@
         <br>
     </div>
 
-
-
-
-
-
-        
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
-
-    <script>
-
-        var wincounter = 0;
-        var playercounter = 0;
-        var losscounter = 0;
-
-         var computerchoice = Math.floor((Math.random() * 101) + 20);
-         console.log(computerchoice)
-         document.getElementById("computernumber").innerHTML = computerchoice;
-
-         var jewelnumber1 = Math.floor((Math.random() * 11) + 1);
-         console.log(jewelnumber1)
-
-         var jewelnumber2 = Math.floor((Math.random() * 11) + 1);
-         console.log(jewelnumber2)
-
-         var jewelnumber3 = Math.floor((Math.random() * 11) + 1);
-         console.log(jewelnumber3)
-
-         var jewelnumber4 = Math.floor((Math.random() * 11) + 1);
-         console.log(jewelnumber4)
-
-        $("jewel1").on("click", function(event) {
-            console.log(jewelnumber1);
-        });
-    
-
-     
-
+    <script src="unit-4-game.js">
     </script>
-
-
-
-
-
-
-
-
-<style>
-    #header{
-        color: whitesmoke;
-        padding: 20px;
-        text-align: center;
-        font-size: 40px;
-    }
-    #container{
-        margin: none;
-        width: auto;
-        background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/05/Art-Images-Wallpaper-HD-Background.jpg");
-    }
-    #gamerules{
-        background-color: lightseagreen;
-        margin-left: 15px;
-        width: 50%;
-        padding: 5px;
-        margin-bottom: 15px;
-    }
-    #computerboard{
-        background-color:lightseagreen;
-        color: green;
-        margin-left: 15px;
-        width: 15%;
-        padding: 15px;
-        float: left;
-        text-align: center;
-        font-weight: bold;
-    }
-    #scoreboard{
-        background-color: lightseagreen;
-        width: 15%;
-        padding: 5px;
-        margin-left: 15%;
-        float:left;
-        text-align: center;
-    }
-    #familyjewels{
-        content: "";
-        display: table;
-        clear: both;
-    }
-    #jewel1{
-        margin-left: 15px;
-        margin-top: 10px;
-        width:15%;
-        float: left;
-    }
-    #jewel2{
-        margin-left: 15px;
-        margin-top: 10px;
-        width:15%;
-        float: left;
-    }
-    #jewel3{
-        margin-left: 15px;
-        margin-top: 10px;
-        width:15%;
-        float: left;
-    }
-    #jewel4{
-        margin-left: 15px;
-        margin-top: 10px;
-        width:15%;
-        float: left;
-    }
-    #playerboard{
-        background-color: lightseagreen;
-        margin-left: 15px;
-        margin-bottom: 15px;
-        padding: 20px;
-        width: 35%;
-        text-align: center;
-    }
-        
-</style>
 
 </body>
 </html>

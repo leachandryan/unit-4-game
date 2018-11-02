@@ -1,0 +1,74 @@
+
+    #header{
+        color: whitesmoke;
+        padding: 20px;
+        text-align: center;
+        font-size: 40px;
+    }
+    #container{
+        margin: none;
+        width: auto;
+        background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/05/Art-Images-Wallpaper-HD-Background.jpg");
+    }
+    #gamerules{
+        background-color: lightseagreen;
+        margin-left: 15px;
+        width: 50%;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    #computerboard{
+        background-color:lightseagreen;
+        color: green;
+        margin-left: 15px;
+        width: 15%;
+        padding: 15px;
+        float: left;
+        text-align: center;
+        font-weight: bold;
+    }
+    #scoreboard{
+        background-color: lightseagreen;
+        width: 15%;
+        padding: 5px;
+        margin-left: 15%;
+        float:left;
+        text-align: center;
+    }
+    #familyjewels{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #jewel1{
+        margin-left: 15px;
+        margin-top: 10px;
+        width:15%;
+        float: left;
+    }
+    #jewel2{
+        margin-left: 15px;
+        margin-top: 10px;
+        width:15%;
+        float: left;
+    }
+    #jewel3{
+        margin-left: 15px;
+        margin-top: 10px;
+        width:15%;
+        float: left;
+    }
+    #jewel4{
+        margin-left: 15px;
+        margin-top: 10px;
+        width:15%;
+        float: left;
+    }
+    #playerboard{
+        background-color: lightseagreen;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        padding: 20px;
+        width: 35%;
+        text-align: center;
+    }
